@@ -35,19 +35,38 @@
         
              <!--     NAVBAR ENDS -->
 
-             <center><div class="alert alert-dark col-md-4 offset-0 text-center mx-5" role="alert">
-    Global Corona Virus Cases
-    <hr>
- 
-   </div>
- 
- 
- 
-   <div class="alert alert-dark col-md-4 offset-0 container-fluid text-center mx-5" role="alert" >
-     Global Corona Virus Cases
-     <hr>
+             <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  
+                  <div class="alert alert-dark text-center" role="alert" >
+                    Global Cases
+                    <hr>
+                 
+                   </div>
+
+                </div>
+                <div class="col-sm">
   
-    </div>
+                  <div class="alert alert-danger text-center" role="alert" >
+                    GlobalDeaths
+                    <hr>
+                 
+                   </div>
+                </div>
+                <div class="col-sm">
+                  
+                  <div class="alert alert-success text-center" role="alert" >
+                    Global Healed
+                    <hr>
+                 
+                   </div>
+
+                </div>
+              </div>
+            </div>
+
+
       
     
     
@@ -59,7 +78,8 @@
 
     </div>
     <br>
-<button class="btn btn-primary" onclick="load_data()">Display Data</button></center>
+
+<center><button class="btn btn-primary" onclick="load_data()">Display Data</button></center>
 
 
 
@@ -112,14 +132,15 @@ function load_data()
     };
     xhttp.open("GET", url, true);
     xhttp.send();
-}
-
-data_json = JSON.parse(data);
+    var data_json =JSON.parse(data);
 
 for(var i=0;i < 50;i++)
 { 
 console.log(data_json[i]["Country"]);
 }
+}
+
+
     </script>
     </html>
     
